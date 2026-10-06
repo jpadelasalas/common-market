@@ -19,7 +19,7 @@ pnpm --dir frontend build
 node scripts/start.mjs        # API on :8100, shell on :5000, remotes on :5001-5003
 ```
 
-Open http://localhost:5000 and pick a demo account on the sign-in page. Setup, data reset, release/rollback and the reviewer walkthrough are in the [runbook](docs/runbook.md).
+Open http://localhost:5000 and pick a demo account on the sign-in page. Setup, data reset, release/rollback and the reviewer walkthrough are in the [runbook](docs/runbook.md); public hosting steps are in [deployment](docs/deployment.md).
 
 ## Highlights
 

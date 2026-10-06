@@ -1,0 +1,54 @@
+# Render Blueprint: Laravel API on the free plan (no card). Steps: docs/deployment.md.
+# Values marked `sync: false` are entered in the Render dashboard and never committed.
+services:
+  - type: web
+    name: common-market-api
+    runtime: docker
+    plan: free
+    region: singapore # same region as the Neon database
+    dockerfilePath: ./backend/apps/api/Dockerfile
+    dockerContext: ./backend/apps/api
+    healthCheckPath: /up
+    autoDeploy: true
+    envVars:
+      - key: APP_NAME
+        value: Common Market
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_KEY # php artisan key:generate --show
+        sync: false
+      - key: APP_URL # https://<shell project>.pages.dev
+        sync: false
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: LOG_LEVEL
+        value: warning
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST # Neon production branch, direct host (no -pooler)
+        sync: false
+      - key: DB_PORT
+        value: "5432"
+      - key: DB_DATABASE
+        value: neondb
+      - key: DB_USERNAME
+        value: neondb_owner
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_SSLMODE
+        value: require
+      # Containers have no persistent disk: keep sessions and rate limits in PostgreSQL.
+      - key: SESSION_DRIVER
+        value: database
+      - key: SESSION_SECURE_COOKIE
+        value: "true"
+      - key: CACHE_STORE
+        value: database
+      - key: QUEUE_CONNECTION
+        value: sync
+      - key: SANCTUM_STATEFUL_DOMAINS # <shell project>.pages.dev (host only, no https://)
+        sync: false
+      - key: DEMO_PASSWORD
+        value: demo-password

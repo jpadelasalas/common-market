@@ -19,11 +19,14 @@ export const shared = {
  */
 export const remoteConfig = (name: string, port: number, version: string) =>
   defineConfig(({ isPreview }) => {
-    const release = ((globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env.RELEASE_VERSION) || version
+    const env = (globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env ?? {}
+    const release = env.RELEASE_VERSION || version
+    // Where browsers fetch this remote from: localhost for the local demo, the hosting origin
+    // (e.g. https://cm-seller.pages.dev) when built for deployment.
+    const origin = (env.REMOTE_ORIGIN || `http://localhost:${port}`).replace(/\/$/, '')
     return {
       // Preview serves every release folder side by side from dist/.
-      // ponytail: fixed local origin; a deployment sets the versioned asset URL here.
-      base: isPreview ? '/' : `http://localhost:${port}/${release}/`,
+      base: isPreview ? '/' : `${origin}/${release}/`,
       define: { 'import.meta.env.VITE_RELEASE': JSON.stringify(release) },
       plugins: [
         react(),

@@ -24,6 +24,9 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->append(SecurityHeaders::class);
         // Sanctum SPA cookie sessions + CSRF for /api requests from SANCTUM_STATEFUL_DOMAINS (ADR-04).
         $middleware->statefulApi();
+        // Hosted behind Cloudflare Pages (proxy) and Render: trust X-Forwarded-* so HTTPS is detected
+        // (secure cookies, HSTS). Locally no proxy sends these headers.
+        $middleware->trustProxies(at: '*');
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         // API common contract: { code, message, errors?, request_id } for every JSON error.

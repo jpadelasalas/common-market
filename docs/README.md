@@ -28,9 +28,9 @@ Project owner and decision maker: John Patrick, who directed the work and approv
 | --- | --- | --- |
 | Planning | OpenAI Codex | Brief, requirements, user stories, state models, architecture and ADRs, API/data outlines, security matrix, traceability, implementation plan, spec gaps, original verification of the documentation |
 | UI/UX design | OpenAI Codex | Pencil design `common-market.pen` (desktop and mobile frames, components, exceptional states), design system, tokens, user flows, screen inventory, preview exports |
-| Code | Anthropic Claude (Claude Code) | Everything under `frontend/`, `backend/`, `scripts/` and `.github/`: microfrontends, Laravel API, migrations and seeders, PHPUnit, PostgreSQL concurrency and Playwright tests, CI |
+| Code | Anthropic Claude (Claude Code) | Everything under `frontend/`, `backend/`, `scripts/` and `.github/` plus `render.yaml`: microfrontends, Laravel API, migrations and seeders, PHPUnit, PostgreSQL concurrency and Playwright tests, CI |
 
-During implementation Claude also updated some planning documents to record what was built and verified: [verification](verification.md) (phase results), [implementation plan](implementation-plan.md) (phase status), [API outline](api/outline.md) (`/auth` session paths), [zero-cost hosting](hosting-zero-cost.md) (2026-10-06 update) and the new [runbook](runbook.md).
+During implementation Claude also updated some planning documents to record what was built and verified: [verification](verification.md) (phase results), [implementation plan](implementation-plan.md) (phase status), [API outline](api/outline.md) (`/auth` session paths), [zero-cost hosting](hosting-zero-cost.md) (2026-10-06 update) and the new [runbook](runbook.md) and [deployment guide](deployment.md).
 
 ## Status and authority
 
