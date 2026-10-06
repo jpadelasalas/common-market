@@ -1,0 +1,7 @@
+{
+  "remotes": {
+    "storefront": { "entry": "http://localhost:5001/0.1.0/remoteEntry.js", "version": "0.1.0", "contractMajor": 1 },
+    "seller": { "entry": "http://localhost:5002/0.1.0/remoteEntry.js", "version": "0.1.0", "contractMajor": 1 },
+    "admin": { "entry": "http://localhost:5003/0.1.0/remoteEntry.js", "version": "0.1.0", "contractMajor": 1 }
+  }
+}

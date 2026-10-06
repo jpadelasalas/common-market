@@ -1,0 +1,14 @@
+# Local configuration and dependency/build output for future implementation.
+.env
+.env.*
+!.env.example
+node_modules/
+vendor/
+dist/
+coverage/
+.DS_Store
+Thumbs.db
+
+# Playwright output
+test-results/
+playwright-report/

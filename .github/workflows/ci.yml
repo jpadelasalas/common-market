@@ -1,0 +1,71 @@
+# Free GitHub Actions CI (CON-05). Backend tests use in-memory SQLite; no secrets are required.
+# The Neon concurrency suite and Playwright journeys need a database and browser, so they run locally.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend/apps/api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: pdo_sqlite, sqlite3, pdo_pgsql
+          coverage: none
+      - run: composer install --no-interaction --prefer-dist --no-progress
+      - run: cp .env.example .env && php artisan key:generate
+      - run: php artisan test
+
+  frontend-checks:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: frontend/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm check
+
+  # Each app is an independent artifact (ADR-01/02): built and published separately, so one remote
+  # can be released or rolled back without rebuilding the shell.
+  frontend-build:
+    needs: frontend-checks
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        app: [shell, storefront, seller, admin]
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: frontend/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @common-market/${{ matrix.app }} build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.app }}-dist
+          path: frontend/apps/${{ matrix.app }}/dist

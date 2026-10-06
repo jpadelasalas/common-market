@@ -1,0 +1,55 @@
+/* Mirrors docs/design/tokens.json. ponytail: hand-copied; generate from JSON when tokens change often. */
+:root {
+  --color-background: #f8f7f4;
+  --color-surface: #ffffff;
+  --color-subtle: #eeece6;
+  --color-border: #dcd9d0;
+  --color-control-border: #807c73;
+  --color-text: #202722;
+  --color-text-secondary: #596258;
+  --color-text-inverse: #ffffff;
+  --color-primary: #23553b;
+  --color-primary-hover: #19412d;
+  --color-primary-soft: #e8efe9;
+  --color-error: #a12b2b;
+  --color-error-soft: #fbefee;
+  --color-warning: #795313;
+  --color-warning-soft: #faf1de;
+  --color-info: #24526f;
+  --color-info-soft: #edf3f8;
+
+  --font-sans: 'Geist', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+
+  --text-caption: 12px/18px var(--font-sans);
+  --text-label: 14px/20px var(--font-sans);
+  --text-body: 16px/24px var(--font-sans);
+  --text-section: 600 22px/30px var(--font-sans);
+  --text-heading: 600 32px/40px var(--font-sans);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --radius-pill: 999px;
+
+  --content-max: 1312px;
+  --gutter: 16px;
+  --control-height: 44px;
+  --motion-feedback: 120ms ease-out;
+}
+
+@media (min-width: 768px) {
+  :root { --gutter: 24px; }
+}
+
+@media (max-width: 767px) {
+  :root { --text-heading: 600 26px/32px var(--font-sans); }
+}

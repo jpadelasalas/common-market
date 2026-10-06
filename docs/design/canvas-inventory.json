@@ -1,0 +1,639 @@
+{
+  "document": "C:\\toDelete\\portfolio-marketplace\\common-market.pen",
+  "checkedOn": "2026-10-05",
+  "artifactType": "Editable static UI designs",
+  "preservedUserFrame": "bi8Au",
+  "primaryFrames": [
+    {
+      "id": "xAlMR",
+      "name": "UI-01 · Discovery · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 1392,
+        "width": 1440,
+        "height": 1439
+      },
+      "context": "US-01 / AC-01, AC-03 / US-10, AC-24, AC-25 intent. Next: UI-02 → UI-03. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-01",
+      "criteria": "AC-01, AC-03"
+    },
+    {
+      "id": "epkLW",
+      "name": "UI-01 · Discovery · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 1392,
+        "width": 390,
+        "height": 1617
+      },
+      "context": "US-01 / AC-01, AC-03 / US-10, AC-24, AC-25 intent. Next: UI-02 → UI-03. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-01",
+      "criteria": "AC-01, AC-03"
+    },
+    {
+      "id": "KnVyi",
+      "name": "UI-02 · Filtered results · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 3149,
+        "width": 1440,
+        "height": 1315
+      },
+      "context": "US-01 / AC-01, AC-02 / US-10, AC-24, AC-25 intent. Next: UI-03 / EX-01, EX-02. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-01",
+      "criteria": "AC-01, AC-02"
+    },
+    {
+      "id": "h44SU",
+      "name": "UI-02 · Filtered results · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 3149,
+        "width": 390,
+        "height": 1436
+      },
+      "context": "US-01 / AC-01, AC-02 / US-10, AC-24, AC-25 intent. Next: UI-03 / EX-01, EX-02. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-01",
+      "criteria": "AC-01, AC-02"
+    },
+    {
+      "id": "xSdU7",
+      "name": "UI-03 · Product details · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 4725,
+        "width": 1440,
+        "height": 1102
+      },
+      "context": "US-01 / AC-03 / US-10, AC-24, AC-25 intent. Next: UI-04 / EX-12. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-01",
+      "criteria": "AC-03"
+    },
+    {
+      "id": "u2xwz",
+      "name": "UI-03 · Product details · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 4725,
+        "width": 390,
+        "height": 1635
+      },
+      "context": "US-01 / AC-03 / US-10, AC-24, AC-25 intent. Next: UI-04 / EX-12. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-01",
+      "criteria": "AC-03"
+    },
+    {
+      "id": "gebqo",
+      "name": "UI-04 · Cart · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 6480,
+        "width": 1440,
+        "height": 1100
+      },
+      "context": "US-02 / AC-04, AC-05 / US-10, AC-24, AC-25 intent. Next: UI-05 or UI-17 / EX-03. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-02",
+      "criteria": "AC-04, AC-05"
+    },
+    {
+      "id": "i2KyU",
+      "name": "UI-04 · Cart · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 6480,
+        "width": 390,
+        "height": 1452
+      },
+      "context": "US-02 / AC-04, AC-05 / US-10, AC-24, AC-25 intent. Next: UI-05 or UI-17 / EX-03. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-02",
+      "criteria": "AC-04, AC-05"
+    },
+    {
+      "id": "L5Ix4",
+      "name": "UI-05 · Checkout · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 8072,
+        "width": 1440,
+        "height": 1084
+      },
+      "context": "US-03 / AC-06–AC-09 / US-10, AC-24, AC-25 intent. Next: UI-06 or EX-04, EX-05, EX-06. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-03",
+      "criteria": "AC-06–AC-09"
+    },
+    {
+      "id": "lkxIU",
+      "name": "UI-05 · Checkout · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 8072,
+        "width": 390,
+        "height": 1846
+      },
+      "context": "US-03 / AC-06–AC-09 / US-10, AC-24, AC-25 intent. Next: UI-06 or EX-04, EX-05, EX-06. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-03",
+      "criteria": "AC-06–AC-09"
+    },
+    {
+      "id": "c3fPK9",
+      "name": "UI-06 · Confirmation · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 10058,
+        "width": 1440,
+        "height": 993
+      },
+      "context": "US-03 / AC-06 / US-10, AC-24, AC-25 intent. Next: UI-08. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-03",
+      "criteria": "AC-06"
+    },
+    {
+      "id": "cbkkV",
+      "name": "UI-06 · Confirmation · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 10058,
+        "width": 390,
+        "height": 1409
+      },
+      "context": "US-03 / AC-06 / US-10, AC-24, AC-25 intent. Next: UI-08. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-03",
+      "criteria": "AC-06"
+    },
+    {
+      "id": "wrWfI",
+      "name": "UI-07 · Buyer orders · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 11607,
+        "width": 1440,
+        "height": 878
+      },
+      "context": "US-04 / AC-10, AC-12 / US-10, AC-24, AC-25 intent. Next: UI-08. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-04",
+      "criteria": "AC-10, AC-12"
+    },
+    {
+      "id": "w3iTWC",
+      "name": "UI-07 · Buyer orders · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 11607,
+        "width": 390,
+        "height": 827
+      },
+      "context": "US-04 / AC-10, AC-12 / US-10, AC-24, AC-25 intent. Next: UI-08. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-04",
+      "criteria": "AC-10, AC-12"
+    },
+    {
+      "id": "rAqyT",
+      "name": "UI-08 · Purchase tracking · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 12625,
+        "width": 1440,
+        "height": 1603
+      },
+      "context": "US-04 / AC-10, AC-11 / US-10, AC-24, AC-25 intent. Next: Cancel seller order dialog. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-04",
+      "criteria": "AC-10, AC-11"
+    },
+    {
+      "id": "G5GWfh",
+      "name": "UI-08 · Purchase tracking · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 12625,
+        "width": 390,
+        "height": 2120
+      },
+      "context": "US-04 / AC-10, AC-11 / US-10, AC-24, AC-25 intent. Next: Cancel seller order dialog. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-04",
+      "criteria": "AC-10, AC-11"
+    },
+    {
+      "id": "mcegI",
+      "name": "UI-09 · Seller order queue · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 15017,
+        "width": 1440,
+        "height": 820
+      },
+      "context": "US-06 / AC-16 / US-10, AC-24, AC-25 intent. Next: UI-10. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-06",
+      "criteria": "AC-16"
+    },
+    {
+      "id": "IIjHV",
+      "name": "UI-09 · Seller order queue · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 15017,
+        "width": 390,
+        "height": 1003
+      },
+      "context": "US-06 / AC-16 / US-10, AC-24, AC-25 intent. Next: UI-10. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-06",
+      "criteria": "AC-16"
+    },
+    {
+      "id": "fegja",
+      "name": "UI-10 · Seller order details · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 16160,
+        "width": 1440,
+        "height": 1032
+      },
+      "context": "US-06 / AC-16, AC-17 / US-10, AC-24, AC-25 intent. Next: Mark shipped → Manual delivery / EX-08. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-06",
+      "criteria": "AC-16, AC-17"
+    },
+    {
+      "id": "SThmZ",
+      "name": "UI-10 · Seller order details · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 16160,
+        "width": 390,
+        "height": 1414
+      },
+      "context": "US-06 / AC-16, AC-17 / US-10, AC-24, AC-25 intent. Next: Mark shipped → Manual delivery / EX-08. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-06",
+      "criteria": "AC-16, AC-17"
+    },
+    {
+      "id": "NBrw4",
+      "name": "UI-11 · Product inventory · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 17714,
+        "width": 1440,
+        "height": 880
+      },
+      "context": "US-05 / AC-13–AC-15 / US-10, AC-24, AC-25 intent. Next: UI-12. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-05",
+      "criteria": "AC-13–AC-15"
+    },
+    {
+      "id": "FupXu",
+      "name": "UI-11 · Product inventory · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 17714,
+        "width": 390,
+        "height": 1257
+      },
+      "context": "US-05 / AC-13–AC-15 / US-10, AC-24, AC-25 intent. Next: UI-12. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-05",
+      "criteria": "AC-13–AC-15"
+    },
+    {
+      "id": "Akbu0",
+      "name": "UI-12 · Product editor · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 19111,
+        "width": 1440,
+        "height": 1179
+      },
+      "context": "US-05 / AC-13, AC-15 / US-10, AC-24, AC-25 intent. Next: Save → UI-11 / EX-09. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-05",
+      "criteria": "AC-13, AC-15"
+    },
+    {
+      "id": "Tglb9",
+      "name": "UI-12 · Product editor · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 19111,
+        "width": 390,
+        "height": 1833
+      },
+      "context": "US-05 / AC-13, AC-15 / US-10, AC-24, AC-25 intent. Next: Save → UI-11 / EX-09. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-05",
+      "criteria": "AC-13, AC-15"
+    },
+    {
+      "id": "O0VHhO",
+      "name": "UI-13 · Seller approval queue · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 21216,
+        "width": 1440,
+        "height": 735
+      },
+      "context": "US-07 / AC-18 / US-10, AC-24, AC-25 intent. Next: UI-14. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-07",
+      "criteria": "AC-18"
+    },
+    {
+      "id": "mACUr",
+      "name": "UI-13 · Seller approval queue · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 21216,
+        "width": 390,
+        "height": 889
+      },
+      "context": "US-07 / AC-18 / US-10, AC-24, AC-25 intent. Next: UI-14. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-07",
+      "criteria": "AC-18"
+    },
+    {
+      "id": "OXEIZ",
+      "name": "UI-14 · Application review · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 22245,
+        "width": 1440,
+        "height": 1135
+      },
+      "context": "US-07 / AC-18 / US-10, AC-24, AC-25 intent. Next: Approve / Reject → UI-13. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-07",
+      "criteria": "AC-18"
+    },
+    {
+      "id": "src32",
+      "name": "UI-14 · Application review · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 22245,
+        "width": 390,
+        "height": 1542
+      },
+      "context": "US-07 / AC-18 / US-10, AC-24, AC-25 intent. Next: Approve / Reject → UI-13. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-07",
+      "criteria": "AC-18"
+    },
+    {
+      "id": "c9VpR",
+      "name": "UI-15 · Listing moderation · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 23927,
+        "width": 1440,
+        "height": 920
+      },
+      "context": "US-08 / AC-19 / US-10, AC-24, AC-25 intent. Next: Reason → Unpublish / Clear restriction / EX-11. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-08",
+      "criteria": "AC-19"
+    },
+    {
+      "id": "JwIyi",
+      "name": "UI-15 · Listing moderation · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 23927,
+        "width": 390,
+        "height": 1292
+      },
+      "context": "US-08 / AC-19 / US-10, AC-24, AC-25 intent. Next: Reason → Unpublish / Clear restriction / EX-11. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-08",
+      "criteria": "AC-19"
+    },
+    {
+      "id": "ljKjT",
+      "name": "UI-16 · Order oversight · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 25359,
+        "width": 1440,
+        "height": 1116
+      },
+      "context": "US-08 / AC-20 / US-10, AC-24, AC-25 intent. Next: Read-only purchase inspection. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-08",
+      "criteria": "AC-20"
+    },
+    {
+      "id": "C4d0M",
+      "name": "UI-16 · Order oversight · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 25359,
+        "width": 390,
+        "height": 1451
+      },
+      "context": "US-08 / AC-20 / US-10, AC-24, AC-25 intent. Next: Read-only purchase inspection. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-08",
+      "criteria": "AC-20"
+    },
+    {
+      "id": "iDkvv",
+      "name": "UI-17 · Authentication · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 27082,
+        "width": 1440,
+        "height": 1107
+      },
+      "context": "US-09 / AC-23 / US-10, AC-24, AC-25 intent. Next: Safe internal return route / EX-07. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-09",
+      "criteria": "AC-23"
+    },
+    {
+      "id": "eXJJt",
+      "name": "UI-17 · Authentication · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 27082,
+        "width": 390,
+        "height": 1122
+      },
+      "context": "US-09 / AC-23 / US-10, AC-24, AC-25 intent. Next: Safe internal return route / EX-07. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-09",
+      "criteria": "AC-23"
+    },
+    {
+      "id": "VKPyl",
+      "name": "UI-18 · Remote unavailable recovery · Desktop",
+      "bounds": {
+        "x": 960,
+        "y": 28344,
+        "width": 1440,
+        "height": 645
+      },
+      "context": "US-09 / AC-22 / US-10, AC-24, AC-25 intent. Next: Retry affected area / Safe return. 1440px: grid browsing, table operations. 768–1199px: collapse sidebar to menu; 2–3 product columns; stack checkout review below form under 1024px. Static annotated flow.",
+      "story": "US-09",
+      "criteria": "AC-22"
+    },
+    {
+      "id": "TKcah",
+      "name": "UI-18 · Remote unavailable recovery · Mobile",
+      "bounds": {
+        "x": 2520,
+        "y": 28344,
+        "width": 390,
+        "height": 767
+      },
+      "context": "US-09 / AC-22 / US-10, AC-24, AC-25 intent. Next: Retry affected area / Safe return. 390px: stacked sections, 2-column goods, labeled operational rows, menu drawer. Static annotated flow.",
+      "story": "US-09",
+      "criteria": "AC-22"
+    }
+  ],
+  "boards": [
+    {
+      "id": "QQZgK",
+      "name": "01 · Foundations and visual direction",
+      "bounds": {
+        "x": 960,
+        "y": 0,
+        "width": 1950,
+        "height": 584
+      }
+    },
+    {
+      "id": "SIQ8z",
+      "name": "06 · Exceptional states",
+      "bounds": {
+        "x": 3200,
+        "y": 3000,
+        "width": 1950,
+        "height": 1988
+      }
+    },
+    {
+      "id": "IWame",
+      "name": "02 · Components and interaction states",
+      "bounds": {
+        "x": 3200,
+        "y": 1400,
+        "width": 1950,
+        "height": 1324
+      }
+    },
+    {
+      "id": "i1s5U",
+      "name": "03 · Buyer journey",
+      "bounds": {
+        "x": 960,
+        "y": 1260,
+        "width": 1950,
+        "height": 113
+      }
+    },
+    {
+      "id": "fnzh0",
+      "name": "04 · Seller journey",
+      "bounds": {
+        "x": 960,
+        "y": 14885,
+        "width": 1950,
+        "height": 113
+      }
+    },
+    {
+      "id": "GxCj8",
+      "name": "05 · Administration",
+      "bounds": {
+        "x": 960,
+        "y": 21084,
+        "width": 1950,
+        "height": 113
+      }
+    },
+    {
+      "id": "HrE6R",
+      "name": "07 · Access and recovery",
+      "bounds": {
+        "x": 960,
+        "y": 26950,
+        "width": 1950,
+        "height": 113
+      }
+    },
+    {
+      "id": "bVfag",
+      "name": "08 · Contextual actions and safe retries",
+      "bounds": {
+        "x": 3200,
+        "y": 5200,
+        "width": 1950,
+        "height": 946
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "k02hxO",
+      "name": "Asset · Stoneware mug, oat",
+      "source": {
+        "type": "unsplash",
+        "username": "thefullonmonet",
+        "link": "https://unsplash.com/@thefullonmonet",
+        "author": "Beyzanur K."
+      },
+      "url": "https://images.unsplash.com/photo-1699391197173-511a372040ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTExODEyNDZ8&ixlib=rb-4.1.0&q=80&w=1080",
+      "usage": "Illustrative seeded product photo; not an exact commercial product representation."
+    },
+    {
+      "id": "Gmq3M",
+      "name": "Asset · Cotton hand towel",
+      "source": {
+        "type": "unsplash",
+        "username": "priscilladupreez",
+        "link": "https://unsplash.com/@priscilladupreez",
+        "author": "Priscilla Du Preez 🇨🇦"
+      },
+      "url": "https://images.unsplash.com/photo-1564019472332-46106fe2b289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTExODEyNDZ8&ixlib=rb-4.1.0&q=80&w=1080",
+      "usage": "Illustrative seeded product photo; not an exact commercial product representation."
+    },
+    {
+      "id": "iS6oT",
+      "name": "Asset · Desk tray, walnut",
+      "source": {
+        "type": "unsplash",
+        "username": "aliona_zahrai",
+        "link": "https://unsplash.com/@aliona_zahrai",
+        "author": "Aliona Zahrai"
+      },
+      "url": "https://images.unsplash.com/photo-1783508905249-c1d5b84c7c0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTExODEyNDZ8&ixlib=rb-4.1.0&q=80&w=1080",
+      "usage": "Illustrative seeded product photo; not an exact commercial product representation."
+    },
+    {
+      "id": "b4f8Rk",
+      "name": "Asset · Woven storage basket",
+      "source": {
+        "type": "unsplash",
+        "username": "anniespratt",
+        "link": "https://unsplash.com/@anniespratt",
+        "author": "Annie Spratt"
+      },
+      "url": "https://images.unsplash.com/photo-1543251796-6c716ef2187b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTExODE0ODl8&ixlib=rb-4.1.0&q=80&w=1080",
+      "usage": "Illustrative seeded product photo; not an exact commercial product representation."
+    },
+    {
+      "id": "WzLmL",
+      "name": "Asset · Linen cushion cover",
+      "source": {
+        "type": "unsplash",
+        "username": "lvenfoto",
+        "link": "https://unsplash.com/@lvenfoto",
+        "author": "Zhang liven"
+      },
+      "url": "https://images.unsplash.com/photo-1675767529465-427ce7a2ab39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTExODEyNDZ8&ixlib=rb-4.1.0&q=80&w=1080",
+      "usage": "Illustrative seeded product photo; not an exact commercial product representation."
+    },
+    {
+      "id": "tg8fA",
+      "name": "Asset · Glass bud vase",
+      "source": {
+        "type": "unsplash",
+        "username": "luandmario",
+        "link": "https://unsplash.com/@luandmario",
+        "author": "Maria Lupan"
+      },
+      "url": "https://images.unsplash.com/photo-1772210933003-f4dd0ab174ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTExODEyNDZ8&ixlib=rb-4.1.0&q=80&w=1080",
+      "usage": "Illustrative seeded product photo; not an exact commercial product representation."
+    }
+  ],
+  "checks": {
+    "primaryCount": 36,
+    "desktopWidth": 1440,
+    "mobileWidth": 390,
+    "rootOverlaps": [],
+    "runtimeTests": "Not run; application implementation is outside this deliverable."
+  }
+}

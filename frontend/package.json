@@ -1,0 +1,22 @@
+{
+  "name": "common-market-frontend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "preview": "pnpm -r --parallel preview",
+    "typecheck": "pnpm -r typecheck",
+    "check": "node --experimental-strip-types apps/shell/src/safePath.check.ts",
+    "e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@module-federation/vite": "^1.7.1",
+    "@playwright/test": "^1.63.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0"
+  }
+}

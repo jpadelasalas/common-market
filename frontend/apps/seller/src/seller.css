@@ -1,0 +1,15 @@
+/* Seller workspace specifics (UI-10, UI-12). Shared operations layout lives in @common-market/ui/ui.css. */
+
+.item-rows { list-style: none; padding: 0; margin: 0 0 var(--space-4); display: grid; gap: var(--space-4); }
+.item-rows li { display: grid; grid-template-columns: 56px 1fr auto; gap: var(--space-3); align-items: center; }
+.item-rows li div { display: grid; }
+.item-rows .thumb { width: 56px; height: 56px; }
+.totals { padding-top: var(--space-3); border-top: 1px solid var(--color-border); }
+
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.editor-photo { width: 220px; height: 220px; }
+.actions-inline { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-2); }
+
+@media (max-width: 767px) {
+  .pair { grid-template-columns: 1fr; }
+}

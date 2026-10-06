@@ -1,0 +1,6 @@
+{
+  "name": "@common-market/design-tokens",
+  "version": "0.1.0",
+  "private": true,
+  "exports": { "./tokens.css": "./tokens.css", "./base.css": "./base.css" }
+}
