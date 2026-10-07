@@ -10,6 +10,11 @@ RUN composer dump-autoload --optimize --no-dev --no-scripts
 
 FROM dunglas/frankenphp:1-php8.3
 RUN install-php-extensions pdo_pgsql opcache intl zip bcmath
+# The image grants frankenphp cap_net_bind_service (ports < 1024). Render's runtime refuses to exec
+# binaries with file capabilities ("exec: frankenphp: Operation not permitted"); we listen on
+# $PORT (10000), so drop the capability.
+RUN command -v setcap >/dev/null || (apt-get update && apt-get install -y --no-install-recommends libcap2-bin && rm -rf /var/lib/apt/lists/*); \
+    setcap -r /usr/local/bin/frankenphp
 COPY docker/php.ini /usr/local/etc/php/conf.d/zz-app.ini
 WORKDIR /app
 COPY --from=vendor /app /app
