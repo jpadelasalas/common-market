@@ -10,26 +10,47 @@ test('guests are sent to sign-in and returned to where they were', async ({ page
   await expect(page).toHaveURL(/\/cart$/)
 })
 
-test('on phones the main menu collapses behind a button and closes with Escape', async ({ page }) => {
+// CMP-01 mobile header (i9d1r1): account and cart icons; the account menu overlays the page.
+test('on phones the buyer account menu overlays the page and returns focus on Escape', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await signInAs(page, 'buyer')
-  const menu = page.getByRole('button', { name: 'Menu' })
-  const orders = page.getByRole('navigation', { name: 'Main' }).getByRole('link', { name: 'Orders' })
+  await page.goto('/')
+  const account = page.getByRole('button', { name: 'Account: Alex Rivera' })
+  const yourOrders = page.getByRole('link', { name: 'Your orders' })
 
-  await expect(menu).toHaveAttribute('aria-expanded', 'false')
-  await expect(orders).toBeHidden()
-  await menu.click()
-  await expect(menu).toHaveAttribute('aria-expanded', 'true')
-  await expect(orders).toBeVisible()
-  await orders.focus()
+  await expect(page.getByRole('link', { name: 'Cart' })).toBeVisible()
+  await expect(yourOrders).toBeHidden()
+  await account.click()
+  await expect(yourOrders).toBeVisible()
   await page.keyboard.press('Escape')
-  await expect(orders).toBeHidden()
-  await expect(menu).toBeFocused()
+  await expect(yourOrders).toBeHidden()
+  await expect(account).toBeFocused()
 
-  await menu.click()
-  await orders.click()
+  await account.click()
+  await yourOrders.click()
   await expect(page).toHaveURL(/\/orders$/)
-  await expect(menu).toHaveAttribute('aria-expanded', 'false') // closes after navigating
+  await expect(yourOrders).toBeHidden() // closes after navigating
+})
+
+// CMP-01 mobile workspace drawer (SqIEc): modal dialog with focus trap, Escape and focus return.
+test('on phones the seller workspace menu opens a drawer that navigates and closes', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await signInAs(page, 'seller')
+  await page.goto('/seller/orders')
+  const open = page.getByRole('button', { name: 'Open workspace menu' })
+  const drawer = page.getByRole('dialog', { name: 'Kubo Living' })
+
+  await open.click()
+  await expect(drawer).toBeVisible()
+  await page.keyboard.press('Escape')
+  await expect(drawer).toBeHidden()
+  await expect(open).toBeFocused()
+
+  await open.click()
+  await drawer.getByRole('link', { name: 'Products' }).click()
+  await expect(page).toHaveURL(/\/seller\/products$/)
+  await expect(drawer).toBeHidden()
+  await expect(page.getByRole('heading', { name: 'Products', level: 1 })).toBeVisible()
 })
 
 test('buyers and pending sellers do not get the seller workspace', async ({ page }) => {

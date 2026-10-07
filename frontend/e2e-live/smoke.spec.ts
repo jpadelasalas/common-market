@@ -11,7 +11,11 @@ async function signIn(page: Page, role: string, name: string) {
   const login = page.waitForResponse((r) => r.url().endsWith('/auth/login') && r.ok())
   await page.getByRole('button', { name: `Use ${role}` }).click()
   await login
-  await expect(page.getByRole('banner').getByText(name)).toBeVisible()
+  await expect(page).not.toHaveURL(/\/sign-in/)
+  // The storefront header shows only the account icon (design CMP-01), so ask the session instead.
+  await expect
+    .poll(() => page.evaluate(async () => (await (await fetch('/auth/session', { headers: { Accept: 'application/json' } })).json()).data?.name ?? null))
+    .toBe(name)
 }
 
 test('public deployment: three roles, three remotes, no console or CSP errors', async ({ page }) => {
