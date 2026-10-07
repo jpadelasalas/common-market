@@ -121,7 +121,7 @@ function WorkspaceHeader({ user, workspace }: { user: SessionUser; workspace: Wo
       <Wordmark />
       <span className="workspace-label">{workspace.label}</span>
       <nav aria-label="Main" className="shell-nav">
-        <AccountMenu user={user} />
+        <AccountMenu user={user} label={user.seller?.name ?? user.name} />
       </nav>
 
       {/* CMP-01 mobile workspace drawer: native <dialog> gives the focus trap, Escape and focus return. */}
@@ -151,7 +151,8 @@ function WorkspaceHeader({ user, workspace }: { user: SessionUser; workspace: Wo
 }
 
 /** Account menu (CMP-01 user icon): an overlay popover; Escape or a click outside closes it. */
-function AccountMenu({ user }: { user: SessionUser }) {
+/** label: what the trigger shows; workspaces show the shop or area (design UI-09..UI-16). */
+function AccountMenu({ user, label = user.name }: { user: SessionUser; label?: string }) {
   const menu = useRef<HTMLDivElement>(null)
   const trigger = useRef<HTMLButtonElement>(null)
   const location = useLocation()
@@ -171,7 +172,7 @@ function AccountMenu({ user }: { user: SessionUser }) {
     <>
       <button ref={trigger} type="button" className="icon-link account-trigger" popoverTarget="account-menu" onClick={place} aria-label={`Account: ${user.name}`}>
         <Icon name="user" />
-        <span className="account-name">{user.name}</span>
+        <span className="account-name">{label}</span>
       </button>
       <div ref={menu} id="account-menu" popover="auto" className="account-menu">
         <p className="account-who">
@@ -181,7 +182,7 @@ function AccountMenu({ user }: { user: SessionUser }) {
         {role === 'buyer' && <Link to="/orders">Your orders</Link>}
         {role === 'seller' && <Link to="/seller">Seller workspace</Link>}
         {role === 'admin' && <Link to="/admin">Administration</Link>}
-        {role !== 'buyer' && <Link to="/">Shop</Link>}
+        {role !== 'buyer' && <Link to="/">Back to shopping</Link>}
         <SignOutButton className="btn btn-block" />
       </div>
     </>
