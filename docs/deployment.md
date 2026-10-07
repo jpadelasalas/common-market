@@ -2,7 +2,7 @@
 
 Topology from [zero-cost hosting](hosting-zero-cost.md): four Cloudflare Pages projects (shell + three remotes), the Laravel API on a Render free web service, and the Neon `production` branch as the database. The shell's Pages Functions proxy `/api`, `/auth` and `/sanctum` to Render, so browsers see one origin and the session cookie stays first-party (ADR-04).
 
-Everything you need is in the repository: [`render.yaml`](../render.yaml), [`backend/apps/api/Dockerfile`](../backend/apps/api/Dockerfile), the proxy in [`frontend/apps/shell/functions`](../frontend/apps/shell/functions) and [`frontend/scripts/deploy-config.ts`](../frontend/scripts/deploy-config.ts). Nothing here has been deployed yet; the first deploy is also the first real test of the container and the Functions (both are covered by local checks only).
+Everything you need is in the repository: [`render.yaml`](../render.yaml), [`backend/apps/api/Dockerfile`](../backend/apps/api/Dockerfile), the proxy in [`frontend/apps/shell/functions`](../frontend/apps/shell/functions) and [`frontend/scripts/deploy-config.ts`](../frontend/scripts/deploy-config.ts). Deployed 2026-10-07 at https://cm-shell.pages.dev following these steps; `pnpm --dir frontend e2e:live` runs a read-only smoke test against it.
 
 Never paste the database password into issues, chats or commits. It goes only into the Render dashboard.
 
@@ -27,7 +27,7 @@ In the Neon console open the `common-market` project, select the `production` br
 
 ## 3. Cloudflare Pages: the three remotes (10 minutes)
 
-Sign up at pages.cloudflare.com (free, no card). For each remote, **Create → Pages → Connect to Git → `common-market`**, then:
+Sign up at dash.cloudflare.com (free, no card). For each remote: **Compute → Workers & Pages → Create**, then the link at the bottom **"Need to use the legacy Pages workflow? Continue to Pages"** (the main flow creates Workers, which this setup does not use) → **Import an existing Git repository → `common-market`**, then:
 
 | Setting | Value (shown for `seller`; use `storefront` / `admin` for the others) |
 | --- | --- |

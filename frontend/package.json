@@ -7,7 +7,8 @@
     "preview": "pnpm -r --parallel preview",
     "typecheck": "pnpm -r typecheck",
     "check": "node --experimental-strip-types apps/shell/src/safePath.check.ts",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "e2e:live": "playwright test --config=e2e-live/live.config.ts"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
