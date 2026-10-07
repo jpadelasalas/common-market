@@ -6,6 +6,11 @@ import { ProductEditor, ProductList } from './products.tsx'
 import '@common-market/ui/ui.css'
 import './seller.css'
 
+// This remote owns /seller/* (architecture.md). Links outside the remote's own <Routes> (side nav,
+// not-found) must be absolute: inside the shell's splat route, React Router 7 resolves relative
+// links against the full current URL, so 'orders' on /seller/orders became /seller/orders/orders.
+const BASE = '/seller'
+
 export const meta: RemoteMeta = { name: 'seller', contractMajor: CONTRACT_MAJOR }
 
 /** Mounted by the shell at /seller/*; relative links resolve below that mount. */
@@ -46,8 +51,8 @@ function Workspace() {
     <div className="workspace">
       <nav className="side-nav" aria-label="Seller workspace">
         <p className="eyebrow">Your shop</p>
-        <NavLink to="orders">Orders</NavLink>
-        <NavLink to="products">Products</NavLink>
+        <NavLink to={`${BASE}/orders`}>Orders</NavLink>
+        <NavLink to={`${BASE}/products`}>Products</NavLink>
         <p className="muted side-note">Portfolio demo · v{import.meta.env.VITE_RELEASE}</p>
       </nav>
       <Routes>
@@ -62,7 +67,7 @@ function Workspace() {
           element={
             <main className="page">
               <h1>Page not found</h1>
-              <Link to="orders">Back to orders</Link>
+              <Link to={`${BASE}/orders`}>Back to orders</Link>
             </main>
           }
         />

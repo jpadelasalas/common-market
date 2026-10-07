@@ -77,6 +77,24 @@ test('moderation hides a listing from shoppers but keeps past orders, until clea
   await expect(page.getByRole('heading', { name: 'Linen cushion cover' })).toBeVisible()
 })
 
+test('the admin side navigation moves between sections without stacking paths', async ({ page }) => {
+  await signInAs(page, 'administrator')
+  await page.goto('/admin/applications')
+  const nav = page.getByRole('navigation', { name: 'Administration' })
+  for (const [link, path, heading] of [
+    ['Moderation', '/admin/moderation', 'Listing moderation'],
+    ['Orders', '/admin/orders', 'Orders'],
+    ['Seller approvals', '/admin/applications', 'Seller approvals'],
+  ] as const) {
+    await nav.getByRole('link', { name: link }).click()
+    await expect(page).toHaveURL(new RegExp(`${path}$`))
+    await expect(page.getByRole('heading', { name: heading, level: 1 })).toBeVisible()
+  }
+  await page.goto('/admin/no-such-page')
+  await page.getByRole('link', { name: 'Back to seller approvals' }).click()
+  await expect(page).toHaveURL(/\/admin\/applications$/)
+})
+
 test('order oversight keeps payment and each shop status separate', async ({ page }) => {
   await signInAs(page, 'administrator')
   await page.goto('/admin/orders?q=CM-1001')

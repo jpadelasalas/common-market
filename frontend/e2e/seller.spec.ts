@@ -24,6 +24,24 @@ test('seller fulfils an order step by step and the buyer-facing history updates'
   for (const step of ['Delivered (demo)', 'Shipped', 'Processing started', 'Order placed']) await expect(history.getByText(step)).toBeVisible()
 })
 
+test('the seller side navigation moves between sections without stacking paths', async ({ page }) => {
+  await signInAs(page, 'seller')
+  await page.goto('/seller/orders')
+  const nav = page.getByRole('navigation', { name: 'Seller workspace' })
+  for (const [link, path, heading] of [
+    ['Products', '/seller/products', 'Products'],
+    ['Orders', '/seller/orders', 'Orders'],
+    ['Products', '/seller/products', 'Products'],
+  ] as const) {
+    await nav.getByRole('link', { name: link }).click()
+    await expect(page).toHaveURL(new RegExp(`${path}$`))
+    await expect(page.getByRole('heading', { name: heading, level: 1 })).toBeVisible()
+  }
+  await page.goto('/seller/no-such-page')
+  await page.getByRole('link', { name: 'Back to orders' }).click()
+  await expect(page).toHaveURL(/\/seller\/orders$/)
+})
+
 test('seller adds a draft, publishes it, and it appears in the storefront', async ({ page }) => {
   await signInAs(page, 'seller')
   await page.goto('/seller/products')

@@ -7,6 +7,11 @@ import { OrderOversight, PurchaseInspection } from './oversight.tsx'
 import '@common-market/ui/ui.css'
 import './admin.css'
 
+// This remote owns /admin/* (architecture.md). Links outside the remote's own <Routes> (side nav,
+// not-found) must be absolute: inside the shell's splat route, React Router 7 resolves relative
+// links against the full current URL, so 'orders' on /admin/orders became /admin/orders/orders.
+const BASE = '/admin'
+
 export const meta: RemoteMeta = { name: 'admin', contractMajor: CONTRACT_MAJOR }
 
 /** Mounted by the shell at /admin/*; relative links resolve below that mount. */
@@ -38,9 +43,9 @@ function Platform() {
     <div className="workspace">
       <nav className="side-nav" aria-label="Administration">
         <p className="eyebrow">Platform</p>
-        <NavLink to="applications">Seller approvals</NavLink>
-        <NavLink to="moderation">Moderation</NavLink>
-        <NavLink to="orders">Orders</NavLink>
+        <NavLink to={`${BASE}/applications`}>Seller approvals</NavLink>
+        <NavLink to={`${BASE}/moderation`}>Moderation</NavLink>
+        <NavLink to={`${BASE}/orders`}>Orders</NavLink>
         <p className="muted side-note">Portfolio demo · v{import.meta.env.VITE_RELEASE}</p>
       </nav>
       <Routes>
@@ -55,7 +60,7 @@ function Platform() {
           element={
             <main className="page work">
               <h1>Page not found</h1>
-              <Link to="applications">Back to seller approvals</Link>
+              <Link to={`${BASE}/applications`}>Back to seller approvals</Link>
             </main>
           }
         />

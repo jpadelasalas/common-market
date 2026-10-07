@@ -27,10 +27,14 @@ test('public deployment: three roles, three remotes, no console or CSP errors', 
   await signIn(page, 'seller', 'Mara Santos')
   await page.goto('/seller/orders')
   await expect(page.getByRole('link', { name: 'View order KL-1001' })).toBeVisible()
+  await page.getByRole('navigation', { name: 'Seller workspace' }).getByRole('link', { name: 'Products' }).click()
+  await expect(page).toHaveURL(//seller/products$/)
 
   await signIn(page, 'administrator', 'Admin Demo')
   await page.goto('/admin/applications')
   await expect(page.getByRole('link', { name: 'Review Sari Studio' })).toBeVisible()
+  await page.getByRole('navigation', { name: 'Administration' }).getByRole('link', { name: 'Moderation' }).click()
+  await expect(page).toHaveURL(//admin/moderation$/)
 
   console.log('console errors:', errors.length ? errors : 'none')
   expect(errors.filter((e) => /Content Security Policy|Refused to/i.test(e))).toEqual([])
